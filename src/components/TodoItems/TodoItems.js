@@ -4,21 +4,12 @@ import "./TodoItems.css";
 const TodoItems = (props) => {
   const { items, deleteItems } = props;
 
-//   const listItems = items.map((item) => {
-//     return (
-//       <div key={item.id}>
-//         <span>{item.name}</span>
-//         <span>{item.age}</span>
-//         <span onClick={ () => deleteItems(item.id)}>&times;</span>
-//       </div>
-//     );
-//   });
   return (
     <div className="ListItems">
       <div>
-        <span>Name</span>
-        <span>Age</span>
-        <span>Action</span>
+        <span className="title name">Name</span>
+        <span className="title age">Age</span>
+        <span className="title action">Action</span>
       </div>
       {!items.length ? (
         <h1>No items found</h1>
@@ -26,9 +17,9 @@ const TodoItems = (props) => {
         items.map((item) => {
             return (
               <div key={item.id}>
-                <span>{item.name}</span>
-                <span>{item.age}</span>
-                <span onClick={ () => deleteItems(item.id)}>&times;</span>
+                <span className="name">{item.name}</span>
+                <span className="age">{item.age}</span>
+                <span className="action icon" onClick={ () => deleteItems(item.id)}>&times;</span>
               </div>
             );
           })

@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import AddItem from "./components/AddItem/AddItem";
 import TodoItems from "./components/TodoItems/TodoItems";
 
